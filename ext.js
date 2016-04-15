@@ -38,9 +38,18 @@
     }
   }
 
+  function setUpEvaluationKit() {
+    /*EvaluationKIT START*/
+    var evalkit_jshosted = document.createElement('script');
+    evalkit_jshosted.setAttribute('type', 'text/javascript');
+    evalkit_jshosted.setAttribute('src', 'https://dce-harvard.evaluationkit.com/CanvasScripts/dce-harvard.js?v=0');document.getElementsByTagName('head')[0].appendChild(evalkit_jshosted);
+    /*EvaluationKIT END*/
+  }
+
   ((function init() {
     window.addEventListener('message', handleMessage, false);
     hideSyllabusTableIfFlagExists();
+    setUpEvaluationKit();
   })());
 
 })());
